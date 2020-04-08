@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "sqltools.connections": [
+        {
+            "database": "${workspaceFolder}\\src/db.sqlite3",
+            "dialect": "SQLite",
+            "name": "Api"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
