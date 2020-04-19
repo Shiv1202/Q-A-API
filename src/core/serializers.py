@@ -43,7 +43,8 @@ class QuestionSerializer(serializers.ModelSerializer):
             'com_tag',
             'subtopic',
             'tag',
-            'user'
+            'user',
+            'date'
         ]
 
 class AnswerSerializer(serializers.ModelSerializer):

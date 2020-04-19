@@ -305,3 +305,21 @@ class OneQuestionView(APIView):
             'tags' : self.get_tag(x.tag.all()),
         }
         return Response(data)
+
+class FilterQuestionView(APIView):
+
+    def get(self, request, format = None):
+        query_param = dict(request.data)
+        com = query_param.get('com_tag')[0]
+        x = Question.objects.all()
+        if com:
+            x = x.filter(com_tag = com)
+        
+        if query_param.get('subtopic')[0]:
+            x = x.filter(subtopic = query_param.get('subtopic')[0])
+
+        if query_param.get('tag')[0]:
+            x = x.filter(tag = query_param.get('tag')[0])
+            
+        for i in x:
+            return Response(QuestionSerializer(i).data)

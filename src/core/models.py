@@ -42,8 +42,7 @@ class SubTopic(models.Model):
 class Question(models.Model):
     Q_text = models.TextField(max_length = 500, unique = True)
     user = models.ForeignKey(User, on_delete = models.CASCADE)
-    # com_id = models.ForeignKey(Company, on_delete = models.CASCADE, n)
-    # topic_id = models.ForeignKey(Topic, on_delete = models.CASCADE)
+    date = models.DateField(auto_now_add = True)
     subtopic = models.ManyToManyField(SubTopic)
     com_tag = models.ManyToManyField(Company)
     tag = models.ManyToManyField(Tag)

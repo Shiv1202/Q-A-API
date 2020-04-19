@@ -8,7 +8,7 @@ from .views import (
     AnswerPostView,
     AnswerCommentPostView,
     QuestionLikePostView, AnswerLikePostView,
-    OneQuestionView,
+    OneQuestionView, FilterQuestionView
 )
 
 urlpatterns = [
@@ -26,4 +26,5 @@ urlpatterns = [
     path('likequestion/', QuestionLikePostView.as_view(), name = 'like_question'),
     path('likeanswer/', AnswerLikePostView.as_view(), name = 'like_answer'),
     path('question/<int:pk>/', OneQuestionView.as_view(), name = 'single_question'),
+    path('filterquestion/', FilterQuestionView.as_view(), name = "filter_question"),
 ]
