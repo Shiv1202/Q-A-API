@@ -24,7 +24,6 @@ This is a backend APIs for a Question Answer Platfrom, where question and answer
   <li><strong>Tags:</strong> Not all information can be captured using topic and subtopic, For example while subtopics can be Stacks, Queues and Lists, master list of tags may contain complexities of algorithms which could be O(n), O(logn) etc.</li>
   <li><strong>Question_tags:</strong> A Question can be associated with multiple tags. This table will contain this information.</li>
   <li><strong>Users:</strong> And finally the list of users who is posting Questions/Answers/Likes etc.</li>
-
-
-
 </ul>
+
+## Various APIs
