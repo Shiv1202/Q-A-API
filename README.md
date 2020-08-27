@@ -14,9 +14,17 @@ This is a backend APIs for a Question Answer Platfrom, where question and answer
 <ul>
   <li><strong>Question:</strong> Core Entity of the platform.</li>
   <li><strong>Company:</strong> A Company for which question was asked(if any).</li>
-  <li><strong>Topic:</strong> Topic for which a question was being asked eg: Data Structures, Algorithms.
-  <li><bold>SubTopic:</bold> </li>
-  </li>
+  <li><strong>Topic:</strong> Topic for which a question was being asked eg: Data Structures, Algorithms.</li>
+  <li><strong>SubTopic:</strong> A topic can have various subtopics Eg: For topic Data Structure, it can have subtopics like Stack, Queues, Lists etc.</li>
+  <li><strong>Answer:</strong> A question can have multiple answers.</li>
+  <li><strong>Answer_comments:</strong> User can comment on answer, hence an answer can have multiple comments.</li>
+  <li><strong>Question_likes:</strong> User have rights to like a question.</li>
+  <li><strong>Question_company_mapping:</strong> A question can be asked for many companies. For example, the same question may be asked by Amazon and Microsoft, To capture this information, we need to have this entity.</li>
+  <li><strong>Answer_likes:</strong> User may like an answer to question. This data would be stored in this table.</li>
+  <li><strong>Tags:</strong> Not all information can be captured using topic and subtopic, For example while subtopics can be Stacks, Queues and Lists, master list of tags may contain complexities of algorithms which could be O(n), O(logn) etc.</li>
+  <li><strong>Question_tags:</strong> A Question can be associated with multiple tags. This table will contain this information.</li>
+  <li><strong>Users:</strong> And finally the list of users who is posting Questions/Answers/Likes etc.</li>
+
 
 
 </ul>
