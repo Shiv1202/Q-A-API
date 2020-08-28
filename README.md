@@ -75,4 +75,85 @@ This is a backend APIs for a Question Answer Platfrom, where question and answer
       </li>
     </ul>
   </li>
+
+  <li><strong>/POST </strong>comments()post comments for a given answer.
+    <ul>
+      <li>Input
+        <ul>
+          <li>Answer ID - Answer for which comment is being posted - Mandatory.</li>
+          <li>User ID - User posting the comment - Mandatory</li>
+          <li>Comment Text - Comment text - Mandatory min length = 50char and max length = 500char</li>
+        </ul>
+      </li>
+      <li>Output
+        <ul>
+          <li>ID - ID of comment saved in database.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+  <li><strong>/POST </strong>Question_likes(For a user to like a given question).
+    <ul>
+      <li>Input
+        <ul>
+          <li>Question ID - Question which is being liked.</li>
+          <li>User ID - Id of user liking th question</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+  <li><strong>/POST </strong>Answer_likes(For a user to liking a given answer).
+    <ul>
+      <li>Input
+        <ul>
+          <li>Answer ID - Answer which is being liked.</li>
+          <li>User ID - Id of user liking th question</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li><strong>/GET Filter Question </strong>Return list of questions based on the combination of following query parameter.
+    <ul>
+      <li>Input
+        <ul>
+          <li>Companies - List of companies - Optional.</li>
+          <li>Subtopics - List of subtopics - Optional</li>
+          <li>Likes - Questions with more like than likes send as input - Optional</li>
+          <li>Date - Question asked after a given date.</li>
+          <li>Tags - List of tags - Optional.</li>
+        </ul>
+      </li>
+      <li>Output
+        <ul>
+          <li>Question ID.</li>
+          <li>Question Text.</li>
+          <li>Companies - List of companies for which the question was asked.</li>
+          <li>Likes - No. of likes of the question.</li>
+          <li>Answer - Answer with most like for the given question.</li>
+          <li>Tags - Tags associated with the given question.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li><strong>/GET Question </strong>Get following details of a question for a given question id.
+    <ul>
+      <li>Question Text</li>
+      <li>List of Answers for the given question with following details.
+        <ul>
+          <li>Answer Text</li>
+          <li>User Id of user who answered the question</li>
+          <li>Number of likes for the answer</li>
+          <li>List of all comments of the answer, along with the date and user who made the comment.</li>
+        </ul>
+      </li>
+      <li>Number of likes that the question has</li>
+      <li>Companies for which the question was asked</li>
+      <li>Tags for the question</li>
+      <li>Topic for the question</li>
+    </ul>
+  </li>
 </ul>
