@@ -39,4 +39,23 @@ This is a backend APIs for a Question Answer Platfrom, where question and answer
     </ul>
   
   </li>
+
+  <li><strong>/POST </strong>Questions
+    <ul>
+      <li>Input
+        <ul>
+          <li>Question Text- Mandatory, Min length 50 char, max length 500 char.</li>
+          <li>CompanyId - Optional</li>
+          <li>SubtopicID - Mandatory</li>
+          <li>Tags - List of tags(Optional)</li>
+          <li>UserId - the ID of user submitting the question.</li>
+        </ul>
+      </li>
+      <li>Output
+        <ul>
+          <li>ID- id of the question saved in database.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
