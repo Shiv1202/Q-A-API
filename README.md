@@ -30,7 +30,7 @@ This is a backend APIs for a Question Answer Platfrom, where question and answer
 <Strong>We are going to build following APIs.</strong>
 
 <ul>
-  <li><strong>CRUD APs</strong> for all master data, which includes following entities/tables.
+  <li><strong>CRUD APIs</strong> for all master data, which includes following entities/tables.
     <ul>
       <li>Company</li>
       <li>Topic</li>
